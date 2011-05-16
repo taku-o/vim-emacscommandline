@@ -24,7 +24,7 @@ MOVEMENT                                        *emacscommandline-movement*
 
 DELETION                                        *emacscommandline-deletion*
 
-*CTRL-D*         delete character under cursor
+*#CTRL-D*        (disabled.) delete character under cursor
 *CTRL-K*         kill line (delete from character under cursor to end of line)
                  (overwrites insert digraph: see |c_CTRL-K|.  This is a shame,
                  but personally I don't use this much in command-line mode.)

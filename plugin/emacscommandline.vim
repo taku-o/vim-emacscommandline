@@ -59,19 +59,19 @@ function! <SID>BackwardWord()
     return getcmdline()
 endfunction
 
-cnoremap <Del> <C-\>e<SID>DeleteChar()<CR>
-cmap <C-D> <Del>
-function! <SID>DeleteChar()
-    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
-    let l:cmd = getcmdline()
-    let l:rem = strpart(l:cmd, getcmdpos() - 1, 1)
-    if ('' != l:rem)
-        let @c = l:rem
-    endif
-    let l:ret = strpart(l:cmd, 0, getcmdpos() - 1) . strpart(l:cmd, getcmdpos())
-    call <SID>saveUndoHistory(l:ret, getcmdpos())
-    return l:ret
-endfunction
+"cnoremap <Del> <C-\>e<SID>DeleteChar()<CR>
+"cmap <C-D> <Del>
+"function! <SID>DeleteChar()
+"    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
+"    let l:cmd = getcmdline()
+"    let l:rem = strpart(l:cmd, getcmdpos() - 1, 1)
+"    if ('' != l:rem)
+"        let @c = l:rem
+"    endif
+"    let l:ret = strpart(l:cmd, 0, getcmdpos() - 1) . strpart(l:cmd, getcmdpos())
+"    call <SID>saveUndoHistory(l:ret, getcmdpos())
+"    return l:ret
+"endfunction
 
 cnoremap <BS> <C-\>e<SID>BackwardDeleteChar()<CR>
 function! <SID>BackwardDeleteChar()

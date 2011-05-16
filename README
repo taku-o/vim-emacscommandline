@@ -1,0 +1,6 @@
+
+fork from https://github.com/houtsnip/vim-emacscommandline.
+disable <C-D> mapping, for c_CTRL-D.
+
+see also, doc/emacscommandline.txt.
+
