@@ -1,6 +1,7 @@
 
 fork from https://github.com/houtsnip/vim-emacscommandline.
-disable <C-D> mapping, for c_CTRL-D.
+disable <C-D> mapping, for c_CTRL-D .
+disable <BS>  mapping, for multibyte char bug.
 
 see also, doc/emacscommandline.txt.
 

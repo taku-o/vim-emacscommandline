@@ -73,21 +73,21 @@ endfunction
 "    return l:ret
 "endfunction
 
-cnoremap <BS> <C-\>e<SID>BackwardDeleteChar()<CR>
-function! <SID>BackwardDeleteChar()
-    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
-    if (getcmdpos() < 2)
-        return getcmdline()
-    endif
-    let l:cmd = getcmdline()
-    let l:rem = strpart(l:cmd, getcmdpos() - 2, 1)
-    let @c    = l:rem
-    let l:pos = getcmdpos() - 1
-    let l:ret = strpart(l:cmd, 0, getcmdpos() - 2) . strpart(l:cmd, getcmdpos() - 1)
-    call <SID>saveUndoHistory(l:ret, l:pos)
-    call setcmdpos(l:pos)
-    return l:ret
-endfunction
+"cnoremap <BS> <C-\>e<SID>BackwardDeleteChar()<CR>
+"function! <SID>BackwardDeleteChar()
+"    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
+"    if (getcmdpos() < 2)
+"        return getcmdline()
+"    endif
+"    let l:cmd = getcmdline()
+"    let l:rem = strpart(l:cmd, getcmdpos() - 2, 1)
+"    let @c    = l:rem
+"    let l:pos = getcmdpos() - 1
+"    let l:ret = strpart(l:cmd, 0, getcmdpos() - 2) . strpart(l:cmd, getcmdpos() - 1)
+"    call <SID>saveUndoHistory(l:ret, l:pos)
+"    call setcmdpos(l:pos)
+"    return l:ret
+"endfunction
 
 cnoremap <C-K> <C-\>e<SID>KillLine()<CR>
 function! <SID>KillLine()
